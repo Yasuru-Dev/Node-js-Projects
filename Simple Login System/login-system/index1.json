@@ -1,0 +1,17 @@
+const express = require("express");
+const fs =  require("fs");
+
+const app = express();
+app.use(express.json());
+
+//register part
+app.post("/register",(req,res)=>{
+
+    const {username,email,password} = req.body;
+
+    const data = fs.readFileSync("users.json");
+    const users = JSON.parse(data);
+    const {username,password} = req.body;
+
+});
+
